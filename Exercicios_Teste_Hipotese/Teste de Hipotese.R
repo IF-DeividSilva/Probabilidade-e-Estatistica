@@ -21,6 +21,10 @@ ggplot(dados,aes(altura))+geom_histogram(bins = 6)+geom_vline(xintercept=19.4193
 # leitura dos dados
 dados2= read.csv('ex2.csv', sep=',', dec='.', header=T)
 
+
+
+
+# ----------------------------------------------------------------------------------------------------------
 # Significancia = erro -> 3%
 # Confianca =   acerto -> 97%
 
