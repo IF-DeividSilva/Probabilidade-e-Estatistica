@@ -3,6 +3,11 @@
 install.packages('agricolae')
 library(agricolae)
 
+install.packages('ggplot2')
+library(ggplot2)
+
+install.packages('easyanova')
+library(easyanova)
 # ex1
 dados=read.csv('dados1ANOVA.csv', sep = ',',dec='.',header = T)
 croqui=design.crd(dados$trat, 5)
@@ -17,14 +22,14 @@ modelo$`Analysis of variance`
 
 #teste de hipotese
 
-#H0: Não existe efeito de tratamento
+#H0: N?o existe efeito de tratamento
 #H1: Ao menos um tramento tem efeito
 
 #p-valor = menor que 0,001 (abaixo de 5%) -> logo rejeita a hipotese  e portanto ao menos 1 tem efeito(H1)
-# comparação 2 a 2 para descobrir o melhor tramento(teste de tukey)
+# compara??o 2 a 2 para descobrir o melhor tramento(teste de tukey)
 
 modelo$Means
-# podemos concluir que a melhor é a "e" ou a "b" pq são igual
+# podemos concluir que a melhor ? a "e" ou a "b" pq s?o igual
 
 #ex2
 dados2=read.csv('dados2ANOVA.csv', sep = ',',dec='.',header = T)
@@ -38,15 +43,15 @@ modelo$`Analysis of variance`
 
 #teste de hipotese
 
-#H0: Não existe efeito de tratamento
+#H0: N?o existe efeito de tratamento
 #H1: Ao menos um tramento tem efeito
 
 #p-valor = menor que 0,001 (abaixo de 5%) -> logo rejeita a hipotese  e portanto ao menos 1 tem efeito(H1)
-# comparação 2 a 2 para descobrir o melhor tramento(teste de tukey)
+# compara??o 2 a 2 para descobrir o melhor tramento(teste de tukey)
 
 modelo$'Adjusted means'
 
-# logo podemos concluir que o bico d ou a apresentam o menor desperdicio, visto que são iguais 
+# logo podemos concluir que o bico d ou a apresentam o menor desperdicio, visto que s?o iguais 
 
 
 #ex3
@@ -60,11 +65,11 @@ modelo$`Analysis of variance`
 
 #teste de hipotese
 
-#H0: Não existe efeito de tratamento
+#H0: N?o existe efeito de tratamento
 #H1: Ao menos um tramento tem efeito
 
-# como o p-valor deu maior que 5% logo não podemos rejeitar a hipotese nula e 
-# não podemos afirmar que as amostras são diferentes
+# como o p-valor deu maior que 5% logo n?o podemos rejeitar a hipotese nula e 
+# n?o podemos afirmar que as amostras s?o diferentes
 
 
 
